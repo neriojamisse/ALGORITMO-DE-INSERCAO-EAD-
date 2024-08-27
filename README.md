@@ -1,3 +1,4 @@
+---
 ```markdown
 # Introdução
 
@@ -100,6 +101,6 @@ A soma dos salarios eh: 9801.25
 ## Conclusão
 
 Ambos os exercícios focam em validação de entradas e manipulação de arrays. O primeiro exercício lida com a inserção de valores em um array e reorganização de elementos, enquanto o segundo foca no registro e cálculo de salários. Ambos são úteis para fortalecer habilidades em controle de fluxo e manipulação de estruturas de dados em C.
-```
 
 O programador: Nerio João Jamisse .
+```
