@@ -1,5 +1,6 @@
----
+
 ```markdown
+---
 # Introdução
 
 Este projeto contém dois exercícios em C que envolvem manipulação de arrays e validação de entradas do usuário. Ambos os exercícios têm como objetivo ensinar boas práticas de programação, como validação de dados, verificação de limites de arrays e cálculo de somas.
