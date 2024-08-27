@@ -13,7 +13,7 @@ void mostrarArray(int Array[]){
     }
 }
 
-bool verificarK(double K){
+bool verificarK(double K){// Funcao para verificar se o valor a introduzir(K) no array eh inteiro ou nao.
      if(K == (int)K){
         return true;
      }else{
@@ -21,7 +21,7 @@ bool verificarK(double K){
      }
 }
 
-bool verificarP(double P){
+bool verificarP(double P){//Funcao para verificar o indice (p), se eh inteiro e se esta dentro dos limites do array.
     if(P == (int)P && (P >= 0 && P < 10)){
         return true;
     }else{
@@ -31,11 +31,11 @@ bool verificarP(double P){
 
 int main(){
 int Array[10] = {11, 15, 16, 8, 2};
-double K, P;
+double K, P;// P e K sao declarados como double para que seja possivel verificar se sao inteiros ou nao.
 int i = 0, N = 5;
 
     printf("===INTRODUZIR ELEMENTOS NO ARRAY===\n\nArray[10] = {");
-    for(i = 0; i < 10; i++){
+    for(i = 0; i < 10; i++){//Para melhor percepcao do usuario, eh exibido o array original,antes de qualquer formatacao  
         if(i == 9){
             printf("%d};\n",Array[i]);
         }else{
@@ -43,7 +43,7 @@ int i = 0, N = 5;
         }
     }
     printf("\nIntroduza o valor do elemento que quer introduzir e o seu respectivo indice.\n");
-    do{
+    do{// Esse loop garante que o usuario possa introduzir o valor(k), ate que seja valido
         printf("Valor: ");
         scanf("%lf",&K);
         if(verificarK(K) == false){
@@ -51,7 +51,7 @@ int i = 0, N = 5;
         }
     }while(verificarK(K) == false);
 
-    do {
+    do {//Esse loop garante que o usuario possa introduzir o indice(P), ate que seja valido
         printf("Indice (0-9): ");
         scanf("%lf", &P);
         if(verificarP(P) == false){
@@ -59,16 +59,19 @@ int i = 0, N = 5;
         }
         }while(verificarP(P) == false);
 
-    int valor = (int)K, indice = (int)P;
+    int valor = (int)K, indice = (int)P;/* Os valores K e P nao serao mais uteis como double,pois ja se tem a certeza
+    que as suas casas decimais sao zeros(ou seja, matematicamente sao interios),entao sao convertidos para int,pois,
+    presisamos desses valores como interos para interragir com loop for que se segue*/
 
-    if(indice < 5){
-        for(i = N; i > indice; i--){
+    if(indice < 5){ 
+        for(i = N; i > indice; i--){/*Afasta os valores do array para a direita para que seja possive introduzir o 
+        valor no indice desejado pelo usuario, quando (indice < 5)*/
             Array[i] = Array[i-1];
         }
         Array[indice] = valor;
         N++;
     }else{
-        Array[indice] = valor;
+        Array[indice] = valor;//Introduz diretamente o valor pois quando(indice >= 5) o erray esta vazio.
     }
 
     mostrarArray(Array);
