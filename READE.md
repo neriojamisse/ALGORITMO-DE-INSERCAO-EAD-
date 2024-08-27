@@ -49,6 +49,7 @@ O elemento de indice 7 = 0
 O elemento de indice 8 = 0
 O elemento de indice 9 = 0
 ```
+<img src="./images/console1.png" alt="Console" width="300" height="300">
 
 ---
 
@@ -92,7 +93,7 @@ O salario do funcionario 3 eh: 4100.00
 
 A soma dos salarios eh: 9801.25
 ```
-
+<img src="./images/console2.png" alt="Console" width="300" height="300">
 
 ---
 
